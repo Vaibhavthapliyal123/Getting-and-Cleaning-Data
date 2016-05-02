@@ -1,0 +1,11 @@
+#Week 3...Getting and Cleaning Data
+#Question 1
+
+#file alreayd in my system, 
+
+idaho_housing<-read.csv("~/idaho_housing", header=TRUE, sep=",")
+View(idaho_housing)
+
+idaho_housing$agricultureLogical<-ifelse(idaho_housing$ACR ==3 & idaho_housing$AGS== 6, TRUE,FALSE)
+
+which(idaho_housing$agricultureLogical) 
